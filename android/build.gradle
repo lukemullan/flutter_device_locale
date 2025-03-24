@@ -22,7 +22,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    namespace "flutter_device_locale"
+    namespace "dev.leadcode.flutter_device_locale"
 
     compileSdkVersion 34
 
