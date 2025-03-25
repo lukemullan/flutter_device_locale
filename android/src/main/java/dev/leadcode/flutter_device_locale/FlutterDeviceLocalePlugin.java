@@ -13,7 +13,6 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 public class FlutterDeviceLocalePlugin implements FlutterPlugin, MethodCallHandler
 {
@@ -27,12 +26,6 @@ public class FlutterDeviceLocalePlugin implements FlutterPlugin, MethodCallHandl
     @Override
     public void onDetachedFromEngine(FlutterPluginBinding binding) {
         channel.setMethodCallHandler(null);
-    }
-
-    public static void registerWith(Registrar registrar)
-    {
-        FlutterDeviceLocalePlugin instance = new FlutterDeviceLocalePlugin();
-        instance.register(registrar.messenger());
     }
 
     private void register(BinaryMessenger binaryMessenger) {
